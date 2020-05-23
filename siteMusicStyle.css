@@ -1,0 +1,236 @@
+
+
+	 	body:before {
+			content: "";/* */
+		    position: fixed;
+		    height: 100%; width: 100%;
+		    background: url('images_video/IMG_20180624_152313.jpg') no-repeat center center fixed;
+		    background-size: cover;
+		    z-index: -1;/*garder le background en fond*/
+		    -webkit-filter: grayscale(100%) blur(4px) invert(100%); /**/
+		    -webkit-opacity: 0.3;
+		}
+
+/* Le menu */
+			.sidenav{
+				height: 100%;
+				width: 0;
+				position: fixed;
+				z-index: 1;
+				top: 52px;
+				left: 0;
+				background-color: #111;
+				overflow-x: hidden;
+				transition: 0.5s:
+				padding-top: 60px;
+				box-shadow: 0px 0px 12px darkblue;
+				opacity: 0.9;
+			}
+			.sidenav p a{
+				padding: 8px 8px 8px 32px;
+				text-decoration: none;
+				font-size: 20px;
+				color: #818181;
+				display: block;
+				transition: 0.3s;
+			}
+			.sidenav p a:hover{
+				margin-right: 50px;
+				color: #f1f1f1;
+				border-radius: 20px;
+				box-shadow: 2px 3px 3px #f1f1f1;
+			}
+			.sidenav .closebtn{
+				position: absolute;
+				top: 0;
+				right: 25px;
+				font-size: 36px;
+				margin-left: 50px;
+			}
+			.closebtn{
+				position: absolute;
+				top: 0;
+				right: 25px;
+				font-size: 26px;
+				margin-left: 50px;
+				color: yellow;
+			}
+			#menu {
+				margin-top: 4rem;
+			}
+
+			#tete {
+				position: fixed;
+				z-index: 10;
+				padding: 10px; margin-left: -10px; margin-top: -10px; margin-right: 0px;
+				background-color: #353535;
+				width: 100%;
+				box-shadow: 0px 0px 12px darkblue;
+			}
+
+			#titre {
+				position: absolute;
+				margin-left: 20%; 
+				margin-top: 5px;
+				font-size: 25px;
+				color: white;
+				letter-spacing: 1px;
+			}
+
+
+/* AUDIO */
+		#playlist {
+
+		}
+
+		button { 
+			filter: hue-rotate(160deg) invert(100%); 
+			font-weight: bold; 
+		}
+
+		#audio_cont{}
+
+		#cadre { 
+			/*position: fixed;
+			z-index: 10;
+			height: 10em;
+			*/
+			margin-left: 50px; 
+		}
+
+		.lecteur { margin-left: 50px;}
+
+		#titre {
+			list-style: none;
+			font-size: 20px;
+		}
+		#titre li a { 
+			text-decoration: none; 
+			color: darkblue;
+			text-align: center;
+			text-shadow: 1px 1px 3px black;
+		}
+		#titre li a:hover { 
+			color: red; 
+			font-style: italic; 
+			font-size: 30px;
+		}
+
+		#divTitre {
+			margin-left: 200px; 
+			margin-top: -130px;
+		}
+		.songActuel {
+			font-size: 30px; 
+			font-style: italic; 
+			
+		}
+		#songTitle {
+				color: darkred; margin-left: 50px; 
+				text-decoration: underline;
+				font-size: 30px;
+				text-shadow: 3px 3px 8px black;
+			}
+		input[type='range']:: -webkit-slider-thumb {
+				-webkit-appearance: none !important;
+				background-color: #E9E9E9;
+				border: 1px solid #CECECE;
+				height: 15px;
+				width: 15px;
+				border-radius: 7.5px;
+				display: inline;
+			}
+		#volumeSlider{width: 110px; color: transparent;}
+		
+		a { text-decoration: none; color: black; }
+
+		a:hover{ color: darkred; font-size: 20px; }
+
+		#img {
+			width: 300px; height: 300px;
+			position: absolute;
+			margin-left: 100px;
+			margin-top: 150px;
+			box-shadow: 4px 4px 9px black;
+		}
+
+/* Images */
+			#images {
+				visibility: hidden;
+				text-align: center;
+				margin-top: -200px;
+			}
+			#slider {
+				width: 800px;
+				object-fit: cover; 
+				background-size: cover;
+				box-shadow: 8px 8px 16px black;
+			}
+
+			.button {
+
+			}
+
+/* Videos */
+			#videos {
+			
+				visibility: hidden;
+				text-align: center;
+				margin-top: -300px;
+			}
+			video {
+				width: 800px;
+				object-fit: cover; 
+				background-size: cover;
+			}
+			#sliderV {
+				box-shadow: 4px 4px 10px black;
+			}
+
+/* Footer */
+			#footer {
+
+			}
+
+		@media all and (max-width: 1000px){
+			#img{
+				width: 150px; height: 150px;
+				position: absolute;
+				margin-left: 300px;
+				margin-top: 20px;
+			}
+			#images {
+				margin-left: -8px;
+			}
+			#slider{
+				margin-left: -8px;
+			}
+			video{
+				margin-left: -8px;
+			}
+
+			#divTitre{
+				margin-left: auto; 
+				margin-right: auto;
+				margin-top: 0px;
+				text-align: center;
+			}
+		}
+
+		@media all and (max-width: 750px){
+			#divTitre{
+				margin-left: -135px;
+			}
+			#slider{
+				width: 510px;
+				object-fit: cover; 
+				background-size: cover;
+				margin-left: -8px;
+			}
+			video{
+				width: 505px;
+				object-fit: cover; 
+				background-size: cover;
+				margin-left: -8px;
+			}
+		}

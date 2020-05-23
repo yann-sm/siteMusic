@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="siteMusicStyle.css">
+
+		<title> music test 01</title>
+</head>
+<body>
+
+	<!-- Navigation -->
+	<section id="tete">
+		<div id="mySidenav" class="sidenav">
+			<div id="menu">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+				<p><a href="javascript:void(0)" onclick="playlist()">PLaylist</a></p>
+				<p><a href="javascript:void(0)" onclick="img()">Images</a></p>
+				<p><a href="javascript:void(0)" onclick="video()">Vidéos</a></p>
+				<p><a></a></p>	
+			</div>
+		</div>
+	
+		<span id="open" style="font-size: 25px; color: white; cursor: pointer;" onclick="openNav()">&#9776; MENU</span>
+	</section>
+
+<!-- playlist -->
+	<section id="playlist">
+		<div id="audio_cont">
+			<div id="main_content"><br><br>
+				
+			    <p id="songTitle"> </p><br/><img src="images_video/Unknown.jpg" id="img">
+
+			</div>
+		</div>
+
+		<div id="cadre"><br><br>
+			
+			<button onclick="previous()" id="prev" style="font-style: italic; "> précédent </button> <!-- fonction a définir-->
+			<button onclick="playOrPauseSong(this)" id="playpause"> play </button>
+			<button onclick="next() "id="next" style="font-style: italic; "> suivant</button>   <!-- fonction a définir-->
+			<br><br>
+			Time :  <input id="songSlider" type="range" value="200" min="0" max="300" step="1" onchange="seekSong()"/><br>
+			Volume :  <input id="volumeSlider" type="range" value="100" min="0" max="100" step="1" onchange="adjustVolume()"/>
+
+		</div><br><br><br>			
+			
+			
+		<br><br>
+		
+		<div id="divTitre">
+			<ol id="titre">
+				<li class="songActuel"><a href="musique/Dio-Holy Diver.mp3"> Dio - Holly Diver</a></li>
+				<li><a href="musique/Twisted Sister -- Were Not Gonna Take It [extended Version] Official Music Video.mp3"> Twisted sister - Were Not Gonna Take It </a></li>
+				<li><a href="musique/Five Finger Death Punch - House Of The Rising Sun.mp3"> Five Finger Death Punch - House Of The Rising Sun</a></li>
+				<li><a href="musique/Soundtrack Guardians Of The Galaxy (theme Song)  Musique Du Film Les Gardiens De La Galaxie.mp3"> Guardians Of The Galaxy (theme Song)</a></li>
+				<li><a href="musique/Steel Panther - Hells On Fire.mp3"> Steel Panther - Hells On Fire</a></li>
+				<li><a href="musique/Steel Panther - Livin On A Prayer.mp3"> Steel Panther - Livin On A Prayer</a></li>
+				<li><a href="musique/jekyll-and-hyde-five-finger-death-punch.mp3"> Five finger death punch - Jekyll and hyde</a></li>
+				<li><a href="musique/gus-g-just-cant-let-go-feat-jacob-bunton.mp3"> Gus g - Just cant let go</a></li>
+				<li><a href="musique/shinedown-simple-man-video.mp3"> Shinedown - Simple man</a></li>
+				<li><a href="musique/killswitch-engage-my-curse-official-video.mp3"> killswitch Engage - My curse</a></li>
+				<li><a href="musique/motorjesus-trouble-in-motor-city.mp3"> Motorjesus - Trouble in motor city</a></li>
+				<li><a href="musique/speed-of-the-beast-motorjesus.mp3"> Motorjesus - Speed of the beast</a></li>
+				<li><a href="musique/01 Bohemian Rhapsody.mp3"> Queen - Bohemian Rhapsody</a></li>
+				<li><a href="musique/01 Feuer Frei.mp3"> Rammstein - Feuer Frei</a></li>
+				<li><a href="musique/02 Long Hard Road Out Of Hell.mp3"> Marilyn Manson - Long Hard Road Out Of Hell</a></li>
+				<li><a href="musique/03 Killer Queen.mp3"> Queen - Killer Queen</a></li>
+				<li><a href="musique/02 Piste 2.mp3"> Nickelbac - Silver side up</a></li>
+				<li><a href="musique/08 Bother.mp3"> Stone sour - Bother</a></li>
+				<li><a href="musique/08 Only inhuman.mp3"> Sonic Syndicate - Only inhuman</a></li>
+				<li><a href="musique/11 Departure 1.mp3"> Trivium - Departure</a></li>
+				<li><a href="musique/15 The Metal.mp3"> Tenacious D - The Metal</a></li>
+				<li><a href="musique/Reload.mp3"> Rob Zombi - Reload</a></li>
+				<li><a href="musique/01 The Number of the Beast.mp3"> Iron Maiden - The Number of the Beast</a></li>
+			</ol>
+			
+		</div>
+		
+	</section>
+
+	<!-- images -->
+	<section id="images">
+		<div>
+			<img id="slider" src="images_video/IMG_20180624_121434.jpg" >
+			<p id="nomImg"></p>
+			<button class="button" onclick="imgPrev()"> &#x27A6; </button>
+			<button class="button" onclick="imgNext()"> &#x27A6; </button>
+		</div>
+	</section>
+
+
+	<!-- videos -->
+	<section id="videos">
+		<div>
+			<video id="sliderV" src="images_video/VID_20180624_121448.mp4" controls ></video>
+			<p id="nomVid"></p>
+			<button class="button" style="transform: rotate(180deg);" onclick="videoPrev()"> &#x27A6; </button>
+			<button class="button" onclick="videoNext()"> &#x27A6; </button>
+		</div>
+	</section>
+
+	<section id="footer">
+		
+	</section>
+
+
+	<br><br><br>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="siteMusicJs.js"></script>
+
+
+</body>
+</html>
